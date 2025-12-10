@@ -30,15 +30,39 @@
   </header>
 
   <main class="container">
+    
+    <section id="nosotros" data-aos="fade-up">
+      <h2>Misión y Visión de SIRYS</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <article class="card">
+          <h3>Misión</h3>
+          <p>Ofrecer soluciones integrales de seguridad, radiocomunicación e inteligencia a nuestros clientes en Ciudad Juárez, garantizando tranquilidad y eficiencia operativa a través de tecnología de vanguardia y un servicio excepcional.</p>
+        </article>
+        <article class="card">
+          <h3>Visión</h3>
+          <p>Ser el líder reconocido en el norte de México por la innovación y calidad en sistemas de inteligencia y seguridad electrónica, expandiendo nuestra cobertura y manteniendo el compromiso con la excelencia y la satisfacción total del cliente.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="servicios">
       <h2>Servicios Principales</h2>
+      <p style="margin-bottom: 25px;">Haga clic en cualquier servicio para ver los detalles, especificaciones e imágenes de nuestros proyectos.</p>
       <div class="grid">
-        <article class="card" data-aos="fade-up">📹 <strong>Video Vigilancia (CCTV)</strong><p>Instalación y configuración de CCTV, NVR, y cámaras IP de alta definición para monitoreo remoto y seguridad empresarial.</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="100">🔐 <strong>Control de Acceso</strong><p>Sistemas de control con tarjetas de proximidad, lectores biométricos y soluciones inteligentes para la gestión segura de puertas y personal.</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="200">📡 <strong>Radiocomunicación</strong><p>Soluciones de radiofrecuencia y sistemas de comunicación empresarial de largo alcance para logística y operaciones en campo.</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="300">🏠 <strong>Casa Inteligente (Domótica)</strong><p>Automatización doméstica completa, integración de sistemas y control remoto de iluminación, seguridad y temperatura.</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="400">🛰️ <strong>Rastreo GPS para Flotas</strong><p>Rastreo satelital, telemetría y geolocalización avanzada para la gestión eficiente y segura de vehículos empresariales y logísticos.</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="500">🛠️ <strong>Mantenimiento y Soporte</strong><p>Servicio técnico especializado y mantenimiento preventivo y correctivo para asegurar la máxima operatividad de sus equipos de seguridad 24/7.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-servicio="video-vigilancia">📹 <strong>Video Vigilancia (CCTV)</strong><p>Instalación y configuración de CCTV, NVR, y cámaras IP de alta definición para monitoreo remoto y seguridad empresarial.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-aos-delay="100" data-servicio="control-acceso">🔐 <strong>Control de Acceso</strong><p>Sistemas de control con tarjetas de proximidad, lectores biométricos y soluciones inteligentes para la gestión segura de puertas y personal.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-aos-delay="200" data-servicio="radiocomunicacion">📡 <strong>Radiocomunicación</strong><p>Soluciones de radiofrecuencia y sistemas de comunicación empresarial de largo alcance para logística y operaciones en campo.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-aos-delay="300" data-servicio="casa-inteligente">🏠 <strong>Casa Inteligente (Domótica)</strong><p>Automatización doméstica completa, integración de sistemas y control remoto de iluminación, seguridad y temperatura.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-aos-delay="400" data-servicio="rastreo-gps">🛰️ <strong>Rastreo GPS para Flotas</strong><p>Rastreo satelital, telemetría y geolocalización avanzada para la gestión eficiente y segura de vehículos empresariales y logísticos.</p></article>
+        <article class="card service-card" data-aos="fade-up" data-aos-delay="500" data-servicio="mantenimiento">🛠️ <strong>Mantenimiento y Soporte</strong><p>Servicio técnico especializado y mantenimiento preventivo y correctivo para asegurar la máxima operatividad de sus equipos de seguridad 24/7.</p></article>
+      </div>
+      
+      <div id="detalle-servicio" class="contact" style="display: none; margin-top: 30px;" data-aos="fade-up">
+        <h3 id="detalle-titulo"></h3>
+        <p id="detalle-descripcion" style="margin-bottom: 20px;"></p>
+        <div id="detalle-galeria" class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+          </div>
+        <button id="cerrar-detalle" class="btn ghost" style="margin-top: 20px;">Cerrar Detalle</button>
       </div>
     </section>
 
