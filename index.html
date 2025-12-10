@@ -33,42 +33,43 @@
       </div>
     </section>
 
-    <section id="galeria">
-      <h2>Galería / Videos</h2>
-      <p>Sube tus videos a YouTube o Facebook y pégalos aquí. Ejemplo integrado:</p>
-      <!-- Replace the src with your YouTube embed link when available -->
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video ejemplo" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
-
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
       <p><strong>Teléfono / WhatsApp:</strong> <a href="tel:+526561373530">656-137-3530</a></p>
       <p><strong>Correo:</strong> <a href="mailto:Integrales.rastreo@gmail.com">Integrales.rastreo@gmail.com</a></p>
       <p><strong>Ciudad:</strong> Juárez, Chihuahua</p>
       <p><strong>Facebook:</strong> <a href="https://www.facebook.com/SistemasIntegralesYRastreoSatelital/" target="_blank" rel="noopener">Visitar Página</a></p>
-      <p class="small">¿No tienes WhatsApp empresarial? No hay problema — cuando lo actives pega aquí el enlace y actualiza la web.</p>
 
-      <div class="contact-actions">
-        <!-- WhatsApp link placeholder - update with full link when available -->
-        <a class="btn" href="https://wa.me/526561373530" target="_blank" rel="noopener">Enviar mensaje por WhatsApp</a>
+      <h3 style="margin-top: 30px;">Envíanos una Consulta</h3>
+      <form name="contacto" method="POST" netlify> 
+          <input type="hidden" name="form-name" value="contacto" />
+          
+          <div class="field">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="nombre" required>
+          </div>
+          <div class="field">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="correo" required>
+          </div>
+          <div class="field">
+              <label for="message">Mensaje / Requerimiento:</label>
+              <textarea id="message" name="mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+      </form>
+      <div class="contact-actions" style="margin-top: 20px;">
+        <a class="btn" href="https://wa.me/526561373530" target="_blank" rel="noopener">Abrir WhatsApp</a>
         <a class="btn ghost" href="mailto:Integrales.rastreo@gmail.com">Enviar correo</a>
       </div>
     </section>
 
-    <section id="descargas" class="downloads">
-      <h2>Descargas</h2>
-      <p>Puedes añadir catálogos o cotizaciones en PDF en la carpeta <code>assets/</code> y linkearlos aquí.</p>
-      <p><a href="assets/catalogo-ejemplo.pdf" download>Descargar catálogo (ejemplo)</a></p>
-    </section>
-  </main>
+    </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 SIRYRS - Sistemas Integrales. Todos los derechos reservados.</p>
-      <p class="small">Diseño responsive listo para Netlify. Para cambiar contenido edita los archivos y vuelve a subir la carpeta.</p>
-    </div>
+      </div>
   </footer>
 
   <script src="script.js"></script>
