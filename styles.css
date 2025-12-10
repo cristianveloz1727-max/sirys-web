@@ -1,32 +1,111 @@
+/*
+  ESTILOS MODERNOS Y OPTIMIZADOS
+  - Tipografía 'Poppins' (Requiere importar la fuente en index.html)
+  - Transiciones suaves y efectos hover en botones y tarjetas
+*/
+
 :root{
   --blue-1:#002b50;
   --blue-2:#0a78c2;
   --bg:#f8f9fb;
   --card:#ffffff;
   --text:#111827;
+  --shadow-subtle: 0 4px 12px rgba(2,6,23,0.06); /* Sombra más sutil */
+  --shadow-lift: 0 8px 16px rgba(2,6,23,0.12);  /* Sombra para el hover */
 }
 
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;}
+
+/* CAMBIO 1: Tipografía Poppins y Ajuste de Fuente */
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y limpia */
+  background:var(--bg); 
+  color:var(--text); 
+  -webkit-font-smoothing:antialiased;
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
 .header, .hero {text-align:center}
 .hero{background:linear-gradient(135deg,var(--blue-1),var(--blue-2)); color:white; padding:60px 20px;}
 .logo{max-width:200px; display:block; margin:0 auto 12px;}
 .hero h1{margin:6px 0 0; font-size:32px; letter-spacing:1px;}
 .tagline{opacity:0.95; margin:8px 0 18px}
 .cta{margin-top:12px}
-.btn{display:inline-block;background:var(--blue-2); color:white; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; margin:6px}
+
+/* CAMBIO 2: Transiciones y Hover en Botones */
+.btn{
+  display:inline-block;
+  background:var(--blue-2); 
+  color:white; 
+  padding:10px 18px; 
+  border-radius:8px; /* Ligeramente menos redondeado para look moderno */
+  text-decoration:none; 
+  font-weight:600; 
+  margin:6px;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+.btn:hover{
+  background: #08619e; /* Color ligeramente más oscuro en hover */
+  transform: translateY(-2px); /* Efecto sutil de elevación */
+  box-shadow: 0 6px 15px rgba(10, 120, 194, 0.4); /* Sombra que coincide con el color */
+}
+
 .btn.ghost{background:transparent; border:2px solid rgba(255,255,255,0.18)}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: none; /* Quitamos la sombra, mantenemos la elevación */
+}
+
 .container{max-width:1100px; margin:36px auto; padding:0 20px}
 h2{color:var(--blue-1); margin-bottom:14px}
 .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px}
-.card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06); font-size:15px}
+
+/* CAMBIO 3: Transiciones y Hover en Tarjetas de Servicio */
+.card{
+  background:var(--card); 
+  padding:20px; /* Un poco más de padding */
+  border-radius:12px; 
+  box-shadow:var(--shadow-subtle); 
+  font-size:15px;
+  transition: all 0.3s ease; /* Transición suave */
+  border: 1px solid transparent; /* Para evitar saltos al añadir borde en hover */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Se eleva un poco más */
+  box-shadow: var(--shadow-lift); /* Sombra más pronunciada al elevarse */
+  border-color: var(--blue-2); /* Borde sutil del color primario */
+}
+
 .video-wrap{background:#000; padding:8px; border-radius:10px; max-width:900px; margin-top:8px}
 .video-wrap iframe{width:100%; height:420px; border:0; border-radius:8px}
-.contact{padding:22px; background:var(--card); border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.contact{padding:22px; background:var(--card); border-radius:12px; box-shadow:var(--shadow-subtle);} /* Usando la variable de sombra */
+
+/* Añadir estilo a los inputs del formulario para que se vean bien */
+.field { margin-bottom: 15px; }
+.contact input[type="text"], 
+.contact input[type="email"], 
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-family: inherit;
+  font-size: 15px;
+}
+.contact textarea { resize: vertical; min-height: 100px; }
+
+
 .contact-actions{margin-top:12px}
 .downloads{margin-top:30px}
 .site-footer{background:var(--blue-1); color:white; padding:18px; text-align:center; margin-top:36px}
 .small{font-size:13px; opacity:0.85}
+
 @media(max-width:600px){
   .video-wrap iframe{height:220px}
   .hero{padding:40px 16px}
